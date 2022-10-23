@@ -1,0 +1,304 @@
+:root {
+    /* ## Colors */
+
+    /* ### Primary */
+
+    --clr-primary-palette-400: hsl(1, 90%, 64%);
+    --clr-primary-palette-800: hsl(219, 85%, 26%);
+
+    /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --clr-neutral-palette-50: hsl(210, 60%, 98%);
+    --clr-neutral-palette-100: hsl(211, 68%, 94%);
+    --clr-neutral-palette-200: hsl(205, 33%, 90%);
+    --clr-neutral-palette-300: hsl(218, 14%, 63%);
+    --clr-neutral-palette-600: hsl(219, 12%, 42%);
+    --clr-neutral-palette-900: hsl(224, 21%, 14%);
+
+    /* ## Typography */
+
+    /* ### Body Copy */
+
+    --fs-heading-l: 20px;
+    --fs-heading-m: 1rem;
+    --fs-body: 0.875rem;
+
+    --ff-primary: 'Plus Jakarta Sans',
+        sans-serif;
+    --fw-500: 500;
+    --fw-800: 800;
+
+    --br: 0.5rem;
+
+}
+
+@media (min-width: 50em) {
+    :root {
+        --fs-heading-l: 24px;
+        --fs-body: 1rem;
+    }
+}
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    position: relative;
+    background: hsla(225, 50%, 98%, 1);
+    color: var(--clr-neutral-palette-600);
+    font-size: var(--fs-body);
+    font-weight: var(--fw-500);
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0 32px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* any ul that has a class on it has these properties */
+ul[class] {
+    list-style: none;
+    padding: 0;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    display: block;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    /* this is something you'll use often but more optional*/
+}
+
+.btn {
+    font-weight: var(--fw-500);
+}
+
+.fs-heading-l,
+.fs-heading-m {
+    color: var(--clr-neutral-palette-900);
+    font-weight: var(--fw-800);
+}
+
+.fs-heading-l {
+    font-size: var(--fs-heading-l);
+}
+
+.fs-heading-m {
+    --br: 6px;
+    max-width: 32px;
+    border-radius: var(--br);
+    font-size: var(--fs-heading-m);
+    background: var(--clr-primary-palette-800);
+    color: var(--white);
+    padding: 7px 11px;
+    margin-left: 9px;
+}
+
+.btn {
+    font-size: inherit;
+}
+
+strong {
+    color: var(--clr-neutral-palette-900);
+    font-weight: var(--fw-800);
+}
+
+.flow>*+* {
+    margin-top: 0.5rem;
+
+}
+
+.card--wrapper {
+
+    --br: 15px;
+
+    background-color: var(--white);
+    min-width: 20ch;
+    max-width: 730px;
+    margin: 0 auto;
+    padding: 24px 16px 29px;
+    border-radius: var(--br);
+    box-shadow: 0px 20px 60px 0px hsla(225, 40%, 47%, 0.05);
+}
+
+.card {
+    display: flex;
+    /* max-width: ; */
+    flex: 1 1 100%;
+    align-items: center;
+    min-width: 20ch;
+    max-width: 670px;
+    line-height: 1.5;
+    padding: 18px 32px 17px 20px;
+    gap: 3px 19px;
+    background: inherit;
+}
+
+.card:first-child {
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.card--unread.card {
+    border-radius: var(--br);
+    background: var(--clr-neutral-palette-50);
+}
+
+.card--unread p {
+    position: relative;
+}
+
+.card--unread p:first-child::after {
+    content: '';
+
+    --br: 50%;
+    display: inline-block;
+    border-radius: var(--br);
+    width: 8px;
+    height: 8px;
+    background-color: var(--clr-primary-palette-400);
+    margin-left: 6px;
+}
+
+.card__img {
+
+    --br: 50%;
+
+    max-width: 39px;
+    border: 1px solid hsla(0, 0%, 0%, 0.05);
+    border-radius: var(--br);
+}
+
+.card__img.chess {
+    --br: 7px;
+    border-radius: var(--br);
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.card__response {
+    max-width: 263px;
+    border: 1px solid hsla(0, 0%, 0%, 0.05);
+    padding: 17px 20px 20px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.attribution {
+    position: absolute;
+    inset: auto 0 0;
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 50em) {
+    .fs-heading-m {
+        margin-left: 22px;
+    }
+
+    .btn {
+        cursor: pointer;
+    }
+
+    .btn:active, .btn:hover {
+        color: var(--clr-primary-palette-800);
+    }
+
+    .card--wrapper {
+        padding: 33px 30px 17px;
+    }
+
+    .card {
+        cursor: pointer;
+    }
+
+    .card:first-child {
+        justify-content: space-between;
+        padding: 0;
+        margin-bottom: 31px;
+    }
+
+    .card__img {
+        max-width: 45px;
+    }
+
+    .card__img.chess {
+        cursor: pointer;
+    }
+
+    .card__response {
+        max-width: 566px;
+    }
+
+    strong {
+        cursor: pointer;
+    }
+
+    strong:active,
+    strong:hover {
+        color: var(--clr-primary-palette-800);
+    }
+
+
+    .card__response {
+        cursor: pointer;
+    }
+
+
+    .card__response:active,
+    .card__response:hover {
+        background: var(--clr-neutral-palette-100);
+    }
+}
