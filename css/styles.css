@@ -20,7 +20,7 @@
 
     /* ### Body Copy */
 
-    --fs-heading-l: 20px;
+    --fs-heading-l: 1.25rem;
     --fs-heading-m: 1rem;
     --fs-body: 0.875rem;
 
@@ -35,7 +35,7 @@
 
 @media (min-width: 50em) {
     :root {
-        --fs-heading-l: 24px;
+        --fs-heading-l: 1.5rem;
         --fs-body: 1rem;
     }
 }
@@ -67,7 +67,7 @@ body {
     font-weight: var(--fw-500);
     line-height: 1.5em;
     margin: 0;
-    padding: 0 32px;
+    padding: 1.5rem 1rem 1.8125rem;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -131,14 +131,14 @@ img {
 }
 
 .fs-heading-m {
-    --br: 6px;
-    max-width: 32px;
+    --br: 0.375rem;
+    max-width: 2rem;
     border-radius: var(--br);
     font-size: var(--fs-heading-m);
     background: var(--clr-primary-palette-800);
     color: var(--white);
-    padding: 7px 11px;
-    margin-left: 9px;
+    padding: 0.4375rem 0.6875rem;
+    margin-left: 0.5625rem;
 }
 
 .btn {
@@ -157,15 +157,15 @@ strong {
 
 .card--wrapper {
 
-    --br: 15px;
+    --br: 0.9375rem;
 
     background-color: var(--white);
     min-width: 20ch;
-    max-width: 730px;
+    max-width: 45.625rem;
     margin: 0 auto;
-    padding: 24px 16px 29px;
+    padding: 1.5rem 1rem 1.8125rem;
     border-radius: var(--br);
-    box-shadow: 0px 20px 60px 0px hsla(225, 40%, 47%, 0.05);
+    box-shadow: 0px 1.25rem 3.75rem 0px hsla(225, 40%, 47%, 0.05);
 }
 
 .card {
@@ -174,17 +174,17 @@ strong {
     flex: 1 1 100%;
     align-items: center;
     min-width: 20ch;
-    max-width: 670px;
+    max-width: 41.875rem;
     line-height: 1.5;
-    padding: 18px 32px 17px 20px;
-    gap: 3px 19px;
+    padding: 1.125rem 2rem 1.0625rem 1.25rem;
+    gap: 0.1875rem 1.1875rem;
     background: inherit;
 }
 
 .card:first-child {
     justify-content: space-between;
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 .card--unread.card {
@@ -202,32 +202,36 @@ strong {
     --br: 50%;
     display: inline-block;
     border-radius: var(--br);
-    width: 8px;
-    height: 8px;
+    width: 0.5rem;
+    height: 0.5rem;
     background-color: var(--clr-primary-palette-400);
-    margin-left: 6px;
+    margin-left: 0.375rem;
 }
 
 .card__img {
 
     --br: 50%;
 
-    max-width: 39px;
+    max-width: 2.4375rem;
     border: 1px solid hsla(0, 0%, 0%, 0.05);
     border-radius: var(--br);
 }
 
 .card__img.chess {
-    --br: 7px;
+    --br: 0.4375rem;
     border-radius: var(--br);
     margin-left: auto;
     margin-right: 0;
 }
 
 .card__response {
-    max-width: 263px;
+
+    --br: 0.3125rem;
+
+    max-width: 16.4375rem;
     border: 1px solid hsla(0, 0%, 0%, 0.05);
-    padding: 17px 20px 20px;
+    border-radius: var(--br);
+    padding: 1.0625rem 1.25rem 1.25rem;
     margin-left: auto;
     margin-right: 0;
 }
@@ -244,8 +248,13 @@ strong {
 }
 
 @media (min-width: 50em) {
+
+    body {
+        padding: 3.9375rem 2rem 5.5625rem;
+    }
+    
     .fs-heading-m {
-        margin-left: 22px;
+        margin-left: 1.375rem;
     }
 
     .btn {
@@ -257,7 +266,7 @@ strong {
     }
 
     .card--wrapper {
-        padding: 33px 30px 17px;
+        padding: 2.0625rem 1.875rem 1.0625rem;
     }
 
     .card {
@@ -267,11 +276,11 @@ strong {
     .card:first-child {
         justify-content: space-between;
         padding: 0;
-        margin-bottom: 31px;
+        margin-bottom: 1.9375rem;
     }
 
     .card__img {
-        max-width: 45px;
+        max-width: 2.8125rem;
     }
 
     .card__img.chess {
@@ -279,7 +288,7 @@ strong {
     }
 
     .card__response {
-        max-width: 566px;
+        max-width: 35.375rem;
     }
 
     strong {
